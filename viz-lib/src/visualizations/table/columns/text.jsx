@@ -12,7 +12,7 @@ function Editor({ column, onChange }) {
           data-test="Table.ColumnEditor.Text.AllowHTML"
           checked={column.allowHTML}
           onChange={event => onChange({ allowHTML: event.target.checked })}>
-          Allow HTML content
+          {__("Allow HTML content")}
         </Checkbox>
       </Section>
 
@@ -22,7 +22,7 @@ function Editor({ column, onChange }) {
             data-test="Table.ColumnEditor.Text.HighlightLinks"
             checked={column.highlightLinks}
             onChange={event => onChange({ highlightLinks: event.target.checked })}>
-            Highlight links
+            {__("Highlight links")}
           </Checkbox>
         </Section>
       )}
@@ -59,5 +59,5 @@ export default function initTextColumn(column) {
   return TextColumn;
 }
 
-initTextColumn.friendlyName = "Text";
+initTextColumn.friendlyName = __("Text");
 initTextColumn.Editor = Editor;

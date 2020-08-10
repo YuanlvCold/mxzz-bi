@@ -398,5 +398,7 @@
     "Data Labels": "数据标签",
     "Label": "标签",
     "Type": "类型",
-    "Order": "顺序"
+    "Order": "顺序",
+    "Leave empty to use default value": "留空使用默认值",
+    "Any positive integer value that specifies size in pixels": "任何正数值代表用像素表示的尺寸"
 }

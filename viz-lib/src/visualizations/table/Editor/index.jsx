@@ -6,6 +6,6 @@ import GridSettings from "./GridSettings";
 import "./editor.less";
 
 export default createTabbedEditor([
-  { key: "Columns", title: "Columns", component: ColumnsSettings },
-  { key: "Grid", title: "Grid", component: GridSettings },
+  { key: "Columns", title: __("Columns"), component: ColumnsSettings },
+  { key: "Grid", title: __("Grid"), component: GridSettings },
 ]);

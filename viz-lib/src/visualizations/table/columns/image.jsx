@@ -12,7 +12,7 @@ function Editor({ column, onChange }) {
     <React.Fragment>
       <Section>
         <Input
-          label="URL template"
+          label={__("URL template")}
           data-test="Table.ColumnEditor.Image.UrlTemplate"
           defaultValue={column.imageUrlTemplate}
           onChange={event => onChangeDebounced({ imageUrlTemplate: event.target.value })}
@@ -23,24 +23,24 @@ function Editor({ column, onChange }) {
         <ControlLabel
           label={
             <React.Fragment>
-              Size
+              {__("Size")}
               <ContextHelp placement="topLeft" arrowPointAtCenter>
-                <div style={{ marginBottom: 5 }}>Any positive integer value that specifies size in pixels.</div>
-                <div>Leave empty to use default value.</div>
+                <div style={{ marginBottom: 5 }}>{__("Any positive integer value that specifies size in pixels")}.</div>
+                <div>{__("Leave empty to use default value")}.</div>
               </ContextHelp>
             </React.Fragment>
           }>
           <div className="image-dimension-selector">
             <Input
               data-test="Table.ColumnEditor.Image.Width"
-              placeholder="Width"
+              placeholder={__("Width")}
               defaultValue={column.imageWidth}
               onChange={event => onChangeDebounced({ imageWidth: event.target.value })}
             />
             <span className="image-dimension-selector-spacer">&times;</span>
             <Input
               data-test="Table.ColumnEditor.Image.Height"
-              placeholder="Height"
+              placeholder={__("Height")}
               defaultValue={column.imageHeight}
               onChange={event => onChangeDebounced({ imageHeight: event.target.value })}
             />
@@ -50,7 +50,7 @@ function Editor({ column, onChange }) {
 
       <Section>
         <Input
-          label="Title template"
+          label={__("Title template")}
           data-test="Table.ColumnEditor.Image.TitleTemplate"
           defaultValue={column.imageTitleTemplate}
           onChange={event => onChangeDebounced({ imageTitleTemplate: event.target.value })}
@@ -61,14 +61,14 @@ function Editor({ column, onChange }) {
         <ContextHelp
           placement="topLeft"
           arrowPointAtCenter
-          icon={<span style={{ cursor: "default" }}>Format specs {ContextHelp.defaultIcon}</span>}>
+          icon={<span style={{ cursor: "default" }}>{__("Format specs ")}{ContextHelp.defaultIcon}</span>}>
           <div>
-            All columns can be referenced using <code>{"{{ column_name }}"}</code> syntax.
+            {__("All columns can be referenced using ")}<code>{"{{ column_name }}"}</code>{__(" syntax.")}
           </div>
           <div>
-            Use <code>{"{{ @ }}"}</code> to reference current (this) column.
+            {__("Use ")}<code>{"{{ @ }}"}</code>{__(" to reference current (this) column.")}
           </div>
-          <div>This syntax is applicable to URL, Title and Size options.</div>
+          <div>{__("This syntax is applicable to URL, Title and Size options.")}</div>
         </ContextHelp>
       </Section>
     </React.Fragment>
@@ -127,5 +127,5 @@ export default function initImageColumn(column) {
   return ImageColumn;
 }
 
-initImageColumn.friendlyName = "Image";
+initImageColumn.friendlyName = __("Image");
 initImageColumn.Editor = Editor;

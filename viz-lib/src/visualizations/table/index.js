@@ -4,7 +4,7 @@ import Editor from "./Editor";
 
 export default {
   type: "TABLE",
-  name: "Table",
+  name: __("Table"),
   getOptions,
   Renderer,
   Editor,

@@ -12,7 +12,7 @@ function Editor({ column, onChange }) {
     <React.Fragment>
       <Section>
         <Input
-          label="URL template"
+          label={__("URL template")}
           data-test="Table.ColumnEditor.Link.UrlTemplate"
           defaultValue={column.linkUrlTemplate}
           onChange={event => onChangeDebounced({ linkUrlTemplate: event.target.value })}
@@ -21,7 +21,7 @@ function Editor({ column, onChange }) {
 
       <Section>
         <Input
-          label="Text template"
+          label={__("Text template")}
           data-test="Table.ColumnEditor.Link.TextTemplate"
           defaultValue={column.linkTextTemplate}
           onChange={event => onChangeDebounced({ linkTextTemplate: event.target.value })}
@@ -30,7 +30,7 @@ function Editor({ column, onChange }) {
 
       <Section>
         <Input
-          label="Title template"
+          label={__("Title template")}
           data-test="Table.ColumnEditor.Link.TitleTemplate"
           defaultValue={column.linkTitleTemplate}
           onChange={event => onChangeDebounced({ linkTitleTemplate: event.target.value })}
@@ -42,7 +42,7 @@ function Editor({ column, onChange }) {
           data-test="Table.ColumnEditor.Link.OpenInNewTab"
           checked={column.linkOpenInNewTab}
           onChange={event => onChange({ linkOpenInNewTab: event.target.checked })}>
-          Open in new tab
+          {__("Open in new tab")}
         </Checkbox>
       </Section>
 
@@ -50,14 +50,14 @@ function Editor({ column, onChange }) {
         <ContextHelp
           placement="topLeft"
           arrowPointAtCenter
-          icon={<span style={{ cursor: "default" }}>Format specs {ContextHelp.defaultIcon}</span>}>
+          icon={<span style={{ cursor: "default" }}>{__("Format specs ")}{ContextHelp.defaultIcon}</span>}>
           <div>
-            All columns can be referenced using <code>{"{{ column_name }}"}</code> syntax.
+            {__("All columns can be referenced using ")}<code>{"{{ column_name }}"}</code>{__(" syntax")}.
           </div>
           <div>
-            Use <code>{"{{ @ }}"}</code> to reference current (this) column.
+            {__("Use ")} <code>{"{{ @ }}"}</code>{__(" to reference current (this) column")}.
           </div>
-          <div>This syntax is applicable to URL, Text and Title options.</div>
+          <div>{__("This syntax is applicable to URL, Text and Title options.")}</div>
         </ContextHelp>
       </Section>
     </React.Fragment>
@@ -113,5 +113,5 @@ export default function initLinkColumn(column) {
   return LinkColumn;
 }
 
-initLinkColumn.friendlyName = "Link";
+initLinkColumn.friendlyName = __("Link");
 initLinkColumn.Editor = Editor;
