@@ -32,7 +32,7 @@ function Editor({ column, onChange }) {
         <Input
           label={
             <React.Fragment>
-              {__("Value for")} <code>true</code>
+              {__("Value for ")} <code>true</code>
             </React.Fragment>
           }
           data-test="Table.ColumnEditor.Boolean.True"

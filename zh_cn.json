@@ -400,5 +400,12 @@
     "Type": "类型",
     "Order": "顺序",
     "Leave empty to use default value": "留空使用默认值",
-    "Any positive integer value that specifies size in pixels": "任何正数值代表用像素表示的尺寸"
+    "Any positive integer value that specifies size in pixels": "任何正数值代表用像素表示的尺寸",
+    "Word Cloud": "标签云",
+    "Words Column": "单词列",
+    "Frequencies Column": "频率列",
+    "Words Length Limit": "单词长度限制",
+    "Max": "最大值",
+    "Min": "最小值",
+    "Frequencies Limit": "频率限制"
 }
