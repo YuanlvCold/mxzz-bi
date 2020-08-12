@@ -41,22 +41,22 @@ export default function GeneralSettings({ options, data, onOptionsChange }) {
     <React.Fragment>
       <Section>
         <Select
-          label="Map type"
+          label={__("Map type")}
           data-test="Choropleth.Editor.MapType"
           defaultValue={options.mapType}
           onChange={mapType => handleChangeAndInferType({ mapType })}>
           <Select.Option key="countries" data-test="Choropleth.Editor.MapType.Countries">
-            Countries
+            {__("Countries")}
           </Select.Option>
           <Select.Option key="subdiv_japan" data-test="Choropleth.Editor.MapType.Japan">
-            Japan/Prefectures
+            {__("Japan/Prefectures")}
           </Select.Option>
         </Select>
       </Section>
 
       <Section>
         <Select
-          label="Key column"
+          label={__("Key column")}
           data-test="Choropleth.Editor.KeyColumn"
           defaultValue={options.countryCodeColumn}
           onChange={countryCodeColumn => handleChangeAndInferType({ countryCodeColumn })}>
@@ -70,7 +70,7 @@ export default function GeneralSettings({ options, data, onOptionsChange }) {
 
       <Section>
         <Select
-          label="Key type"
+          label={__("Key type")}
           data-test="Choropleth.Editor.KeyType"
           value={options.countryCodeType}
           onChange={countryCodeType => onOptionsChange({ countryCodeType })}>
@@ -84,7 +84,7 @@ export default function GeneralSettings({ options, data, onOptionsChange }) {
 
       <Section>
         <Select
-          label="Value column"
+          label={__("Value column")}
           data-test="Choropleth.Editor.ValueColumn"
           defaultValue={options.valueColumn}
           onChange={valueColumn => onOptionsChange({ valueColumn })}>

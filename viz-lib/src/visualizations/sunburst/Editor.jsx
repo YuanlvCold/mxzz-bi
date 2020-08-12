@@ -4,48 +4,48 @@ import { Section } from "@/components/visualizations/editor";
 export default function Editor() {
   return (
     <React.Fragment>
-      <p>This visualization expects the query result to have rows in one of the following formats:</p>
+      <p>{__("This visualization expects the query result to have rows in one of the following formats")}:</p>
       <Section>
         <p>
-          <strong>Option 1:</strong>
+          <strong>{__("Option")} 1:</strong>
         </p>
         <ul>
           <li>
-            <strong>sequence</strong> - sequence id
+            <strong>sequence</strong> - {__("sequence id")}
           </li>
           <li>
-            <strong>stage</strong> - what stage in sequence this is (1, 2, ...)
+            <strong>stage</strong> - {__("what stage in sequence this is (1, 2, ...)")}
           </li>
           <li>
-            <strong>node</strong> - stage name
+            <strong>node</strong> - {__("stage name")}
           </li>
           <li>
-            <strong>value</strong> - number of times this sequence occurred
+            <strong>value</strong> - {__("number of times this sequence occurred")}
           </li>
         </ul>
       </Section>
       <Section>
         <p>
-          <strong>Option 2:</strong>
+          <strong>{__("Option")} 2:</strong>
         </p>
         <ul>
           <li>
-            <strong>stage1</strong> - stage 1 value
+            <strong>stage1</strong> - {__("stage 1 value")}
           </li>
           <li>
-            <strong>stage2</strong> - stage 2 value (or null)
+            <strong>stage2</strong> - {__("stage 2 value (or null)")}
           </li>
           <li>
-            <strong>stage3</strong> - stage 3 value (or null)
+            <strong>stage3</strong> - {__("stage 3 value (or null)")}
           </li>
           <li>
-            <strong>stage4</strong> - stage 4 value (or null)
+            <strong>stage4</strong> - {__("stage 4 value (or null)")}
           </li>
           <li>
-            <strong>stage5</strong> - stage 5 value (or null)
+            <strong>stage5</strong> - {__("stage 5 value (or null)")}
           </li>
           <li>
-            <strong>value</strong> - number of times this sequence occurred
+            <strong>value</strong> - {__("number of times this sequence occurred")}
           </li>
         </ul>
       </Section>

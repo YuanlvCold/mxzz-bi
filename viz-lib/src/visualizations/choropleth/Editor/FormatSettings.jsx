@@ -17,7 +17,7 @@ function TemplateFormatHint({ mapType }) {
   return (
     <ContextHelp placement="topLeft" arrowPointAtCenter>
       <div style={{ paddingBottom: 5 }}>
-        All query result columns can be referenced using <code>{"{{ column_name }}"}</code> syntax.
+        {__("All query result columns can be referenced using")} <code>{"{{ column_name }}"}</code>{__(" syntax.")}
       </div>
       <div style={{ paddingBottom: 5 }}>Use special names to access additional properties:</div>
       <div>
@@ -75,7 +75,7 @@ export default function GeneralSettings({ options, onOptionsChange }) {
             <Input
               label={
                 <React.Fragment>
-                  Value format
+                  {__("Value format")}
                   <ContextHelp.NumberFormatSpecs />
                 </React.Fragment>
               }
@@ -86,7 +86,7 @@ export default function GeneralSettings({ options, onOptionsChange }) {
           </Grid.Col>
           <Grid.Col span={12}>
             <Input
-              label="Value placeholder"
+              label={__("Value placeholder")}
               data-test="Choropleth.Editor.ValuePlaceholder"
               defaultValue={options.noValuePlaceholder}
               onChange={event => onOptionsChangeDebounced({ noValuePlaceholder: event.target.value })}
@@ -100,7 +100,7 @@ export default function GeneralSettings({ options, onOptionsChange }) {
           data-test="Choropleth.Editor.LegendVisibility"
           checked={options.legend.visible}
           onChange={event => onOptionsChange({ legend: { visible: event.target.checked } })}>
-          Show legend
+          {__("Show legend")}
         </Checkbox>
       </Section>
 
@@ -108,29 +108,29 @@ export default function GeneralSettings({ options, onOptionsChange }) {
         <Grid.Row gutter={15}>
           <Grid.Col span={12}>
             <Select
-              label="Legend position"
+              label={__("Legend position")}
               data-test="Choropleth.Editor.LegendPosition"
               disabled={!options.legend.visible}
               defaultValue={options.legend.position}
               onChange={position => onOptionsChange({ legend: { position } })}>
               <Select.Option value="top-left" data-test="Choropleth.Editor.LegendPosition.TopLeft">
-                top / left
+              {__("top / left")}
               </Select.Option>
               <Select.Option value="top-right" data-test="Choropleth.Editor.LegendPosition.TopRight">
-                top / right
+                {__("top / right")}
               </Select.Option>
               <Select.Option value="bottom-left" data-test="Choropleth.Editor.LegendPosition.BottomLeft">
-                bottom / left
+                {__("bottom / left")}
               </Select.Option>
               <Select.Option value="bottom-right" data-test="Choropleth.Editor.LegendPosition.BottomRight">
-                bottom / right
+                {__("bottom / right")}
               </Select.Option>
             </Select>
           </Grid.Col>
           <Grid.Col span={12}>
             <TextAlignmentSelect
               data-test="Choropleth.Editor.LegendTextAlignment"
-              label="Legend text alignment"
+              label={__("Legend text alignment")}
               disabled={!options.legend.visible}
               defaultValue={options.legend.alignText}
               onChange={event => onOptionsChange({ legend: { alignText: event.target.value } })}
@@ -144,7 +144,7 @@ export default function GeneralSettings({ options, onOptionsChange }) {
           data-test="Choropleth.Editor.TooltipEnabled"
           checked={options.tooltip.enabled}
           onChange={event => onOptionsChange({ tooltip: { enabled: event.target.checked } })}>
-          Show tooltip
+          {__("Show tooltip")}
         </Checkbox>
       </Section>
 
@@ -163,7 +163,7 @@ export default function GeneralSettings({ options, onOptionsChange }) {
           data-test="Choropleth.Editor.PopupEnabled"
           checked={options.popup.enabled}
           onChange={event => onOptionsChange({ popup: { enabled: event.target.checked } })}>
-          Show popup
+          {__("Show popup")}
         </Checkbox>
       </Section>
 

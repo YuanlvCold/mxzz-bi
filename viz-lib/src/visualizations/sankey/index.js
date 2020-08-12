@@ -3,7 +3,7 @@ import Editor from "./Editor";
 
 export default {
   type: "SANKEY",
-  name: "Sankey",
+  name: __("Sankey"),
   getOptions: options => ({ ...options }),
   Renderer,
   Editor,

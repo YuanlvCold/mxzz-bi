@@ -3,7 +3,7 @@ import Editor from "./Editor";
 
 export default {
   type: "SUNBURST_SEQUENCE",
-  name: "Sunburst Sequence",
+  name: __("Sunburst Sequence"),
   getOptions: options => ({ ...options }),
   Renderer,
   Editor,

@@ -8,9 +8,9 @@ function TemplateFormatHint() {
   return (
     <ContextHelp placement="topLeft" arrowPointAtCenter>
       <div style={{ paddingBottom: 5 }}>
-        All query result columns can be referenced using <code>{"{{ column_name }}"}</code> syntax.
+        {__("All query result columns can be referenced using")} <code>{"{{ column_name }}"}</code>{__(" syntax.")}
       </div>
-      <div style={{ paddingBottom: 5 }}>Leave this field empty to use default template.</div>
+      <div style={{ paddingBottom: 5 }}>{__("Leave this field empty to use default template")}.</div>
     </ContextHelp>
   );
 }
@@ -27,7 +27,7 @@ export default function FormatSettings({ options, onOptionsChange }) {
           data-test="Map.Editor.TooltipEnabled"
           checked={options.tooltip.enabled}
           onChange={event => onOptionsChange({ tooltip: { enabled: event.target.checked } })}>
-          Show tooltip
+          {__("Show tooltip")}
         </Checkbox>
       </Section>
 
@@ -36,7 +36,7 @@ export default function FormatSettings({ options, onOptionsChange }) {
           label={<React.Fragment>Tooltip template {templateFormatHint}</React.Fragment>}
           data-test="Map.Editor.TooltipTemplate"
           disabled={!options.tooltip.enabled}
-          placeholder="Default template"
+          placeholder={__("Default template")}
           defaultValue={options.tooltip.template}
           onChange={event => onOptionsChangeDebounced({ tooltip: { template: event.target.value } })}
         />
@@ -47,7 +47,7 @@ export default function FormatSettings({ options, onOptionsChange }) {
           data-test="Map.Editor.PopupEnabled"
           checked={options.popup.enabled}
           onChange={event => onOptionsChange({ popup: { enabled: event.target.checked } })}>
-          Show popup
+          {__("Show popup")}
         </Checkbox>
       </Section>
 
@@ -57,7 +57,7 @@ export default function FormatSettings({ options, onOptionsChange }) {
           data-test="Map.Editor.PopupTemplate"
           disabled={!options.popup.enabled}
           rows={4}
-          placeholder="Default template"
+          placeholder={__("Default template")}
           defaultValue={options.popup.template}
           onChange={event => onOptionsChangeDebounced({ popup: { template: event.target.value } })}
         />

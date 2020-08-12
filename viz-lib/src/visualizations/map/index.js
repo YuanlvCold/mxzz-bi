@@ -4,7 +4,7 @@ import Editor from "./Editor";
 
 export default {
   type: "MAP",
-  name: "Map (Markers)",
+  name: __("Map (Markers)"),
   getOptions,
   Renderer,
   Editor,

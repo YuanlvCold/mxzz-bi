@@ -12,18 +12,18 @@ export default function ColorsSettings({ options, onOptionsChange }) {
       <Section>
         <Select
           layout="horizontal"
-          label="Clustering mode"
+          label={__("Clustering mode")}
           data-test="Choropleth.Editor.ClusteringMode"
           defaultValue={options.clusteringMode}
           onChange={clusteringMode => onOptionsChange({ clusteringMode })}>
           <Select.Option value="q" data-test="Choropleth.Editor.ClusteringMode.q">
-            quantile
+            {__("quantile")}
           </Select.Option>
           <Select.Option value="e" data-test="Choropleth.Editor.ClusteringMode.e">
-            equidistant
+            {__("equidistant")}
           </Select.Option>
           <Select.Option value="k" data-test="Choropleth.Editor.ClusteringMode.k">
-            k-means
+            {__("k-means")}
           </Select.Option>
         </Select>
       </Section>
@@ -31,7 +31,7 @@ export default function ColorsSettings({ options, onOptionsChange }) {
       <Section>
         <InputNumber
           layout="horizontal"
-          label="Steps"
+          label={__("Steps")}
           data-test="Choropleth.Editor.ColorSteps"
           min={3}
           max={11}
@@ -43,7 +43,7 @@ export default function ColorsSettings({ options, onOptionsChange }) {
       <Section>
         <ColorPicker
           layout="horizontal"
-          label="Min Color"
+          label={__("Min Color")}
           interactive
           presetColors={ColorPalette}
           placement="topRight"
@@ -57,7 +57,7 @@ export default function ColorsSettings({ options, onOptionsChange }) {
       <Section>
         <ColorPicker
           layout="horizontal"
-          label="Max Color"
+          label={__("Max Color")}
           interactive
           presetColors={ColorPalette}
           placement="topRight"
@@ -71,7 +71,7 @@ export default function ColorsSettings({ options, onOptionsChange }) {
       <Section>
         <ColorPicker
           layout="horizontal"
-          label="No value color"
+          label={__("No value color")}
           interactive
           presetColors={ColorPalette}
           placement="topRight"
@@ -85,7 +85,7 @@ export default function ColorsSettings({ options, onOptionsChange }) {
       <Section>
         <ColorPicker
           layout="horizontal"
-          label="Background color"
+          label={__("Background color")}
           interactive
           presetColors={ColorPalette}
           placement="topRight"
@@ -99,7 +99,7 @@ export default function ColorsSettings({ options, onOptionsChange }) {
       <Section>
         <ColorPicker
           layout="horizontal"
-          label="Borders color"
+          label={__("Borders color")}
           interactive
           presetColors={ColorPalette}
           placement="topRight"
