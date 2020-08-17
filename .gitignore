@@ -15,6 +15,7 @@ client/dist
 _build
 .vscode
 .env
+.vs
 
 dump.rdb
 
